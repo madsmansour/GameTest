@@ -4,6 +4,7 @@ import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.settings.GameSettings;
+import com.almasb.fxgl.texture.Texture;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -25,7 +26,8 @@ public class SimpleGame extends GameApplication {
     protected void initGame() {
         player = Entities.builder()
                 .at(300, 300)
-                .viewFromNode(new Rectangle(25, 25, Color.DARKGREEN))
+                //.viewFromNode(new Rectangle(25, 25, Color.DARKGREEN))
+                .viewFromTexture("brick.png")
                 .buildAndAttach(getGameWorld());
     }
 
@@ -64,6 +66,13 @@ public class SimpleGame extends GameApplication {
                 getGameState().increment("pixelsMoved", +5);
             }
         }, KeyCode.S);
+
+        input.addAction(new UserAction("Play Sound") {
+            @Override
+            protected void onActionBegin() {
+                getAudioPlayer().playSound("muscle-car-daniel_simon.wav");
+            }
+        }, KeyCode.F);
     }
     @Override
     protected void initUI() {
@@ -73,13 +82,18 @@ public class SimpleGame extends GameApplication {
 
         getGameScene().addUINode(textPixels); // add to the scene graph
         textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
+
+        Texture brickTexture = getAssetLoader().loadTexture("brick.png");
+        brickTexture.setTranslateX(50);
+        brickTexture.setTranslateY(450);
+
+        getGameScene().addUINode(brickTexture);
     }
 
     @Override
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("pixelsMoved", 0);
     }
-
 
     public static void main(String[] args) {
         launch(args);
