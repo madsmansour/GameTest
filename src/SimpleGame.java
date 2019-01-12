@@ -1,4 +1,6 @@
+import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.app.GameApplication;
+import com.almasb.fxgl.asset.AssetLoader;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.components.CollidableComponent;
@@ -7,31 +9,53 @@ import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
+import javafx.application.Application;
 import javafx.scene.input.KeyCode;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
+import javax.swing.*;
 import java.util.Map;
 
 public class SimpleGame extends GameApplication {
+
     @Override
     protected void initSettings(GameSettings gameSettings) {
-        gameSettings.setTitle("Simple Game");
+        gameSettings.setTitle("SlimeSoccer2000");
         gameSettings.setWidth(1200);
         gameSettings.setHeight(600);
         gameSettings.setVersion("0.1");
+        gameSettings.setMenuKey(KeyCode.M);
+        gameSettings.getMenuKey();
+        gameSettings.setMenuEnabled(true);
+
+
     }
     private Entity player;
 
     @Override
     protected void initGame() {
+        Entities.builder()
+                .type(EntityType.BACKGROUND)
+                .at(0, 0)
+                .viewFromTexture("background1.png")
+                .buildAndAttach(getGameWorld());
+
         player = Entities.builder()
                 .at(100, 499)
                 .type(EntityType.PLAYER)
                 //.viewFromNode(new Rectangle(25, 25, Color.DARKGREEN))
                 .viewFromTextureWithBBox("slime1.png")
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+
+        player = Entities.builder()
+                .at(400, 499)
+                .type(EntityType.PLAYER2)
+                //.viewFromNode(new Rectangle(25, 25, Color.DARKGREEN))
+                .viewFromTextureWithBBox("slime2.png")
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
@@ -46,7 +70,7 @@ public class SimpleGame extends GameApplication {
     }
 
     public enum EntityType {
-        PLAYER, COIN
+        PLAYER, PLAYER2, COIN , BACKGROUND ,
     }
 
     @Override
@@ -91,6 +115,8 @@ public class SimpleGame extends GameApplication {
                 getAudioPlayer().playSound("muscle-car-daniel_simon.wav");
             }
         }, KeyCode.F);
+
+
     }
     @Override
     protected void initUI() {
