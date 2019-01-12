@@ -111,7 +111,7 @@ public class SimpleGame extends GameApplication {
         input.addAction(new UserAction("Play Sound") {
             @Override
             protected void onActionBegin() {
-                getAudioPlayer().playSound("muscle-car-daniel_simon.wav");
+                getAudioPlayer().playSound("siii.wav");
             }
         }, KeyCode.F);
 
