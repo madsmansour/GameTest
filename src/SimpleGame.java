@@ -15,7 +15,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-
 import javax.swing.*;
 import java.util.Map;
 
@@ -51,7 +50,7 @@ public class SimpleGame extends GameApplication {
                 .buildAndAttach(getGameWorld());
 
                  Entities.builder()
-                .at(910, 395)
+                .at(910, 391)
                 .type(EntityType.PLAYER2)
                 .viewFromTextureWithBBox("slime2.png")
                 .with(new CollidableComponent(true))
