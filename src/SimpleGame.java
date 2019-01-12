@@ -31,7 +31,6 @@ public class SimpleGame extends GameApplication {
         gameSettings.getMenuKey();
         gameSettings.setMenuEnabled(true);
 
-
     }
     private Entity player;
 
@@ -64,8 +63,6 @@ public class SimpleGame extends GameApplication {
                 .viewFromNodeWithBBox(new Circle(15, Color.YELLOW))
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
-
-
     }
 
     public enum EntityType {
@@ -108,7 +105,7 @@ public class SimpleGame extends GameApplication {
             }
         }, KeyCode.S);
 
-        input.addAction(new UserAction("Play Sound") {
+        input.addAction(new UserAction("Siiiiiii") {
             @Override
             protected void onActionBegin() {
                 getAudioPlayer().playSound("siii.wav");
