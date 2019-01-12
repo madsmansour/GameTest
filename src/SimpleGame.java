@@ -44,17 +44,16 @@ public class SimpleGame extends GameApplication {
                 .buildAndAttach(getGameWorld());
 
         player = Entities.builder()
-                .at(100, 499)
+                .at(100, 395)
                 .type(EntityType.PLAYER)
                 //.viewFromNode(new Rectangle(25, 25, Color.DARKGREEN))
                 .viewFromTextureWithBBox("slime1.png")
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
-        player = Entities.builder()
-                .at(400, 499)
+                 Entities.builder()
+                .at(910, 395)
                 .type(EntityType.PLAYER2)
-                //.viewFromNode(new Rectangle(25, 25, Color.DARKGREEN))
                 .viewFromTextureWithBBox("slime2.png")
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
@@ -115,7 +114,6 @@ public class SimpleGame extends GameApplication {
                 getAudioPlayer().playSound("muscle-car-daniel_simon.wav");
             }
         }, KeyCode.F);
-
 
     }
     @Override

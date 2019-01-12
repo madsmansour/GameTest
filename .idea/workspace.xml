@@ -3,16 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="50d9269a-64d5-4d15-961c-112882f58965" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.46.56.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.50.35.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.52.54.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.53.15.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.56.08.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.57.51.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.59.43.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-12.59.50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-13.00.03.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-10-jan.-2019-13.02.33.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$3.class" afterDir="false" />
@@ -55,13 +45,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="1215" />
+          <entry key="java" value="1378" />
           <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1215" />
+          <entry key="JAVA" value="1378" />
           <entry key="PLAIN_TEXT" value="17" />
         </counts>
       </usages-collector>
@@ -72,14 +62,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SimpleGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+            <state relative-caret-position="277">
+              <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#4427#4428#0" expanded="true" />
+                <element signature="e#4469#4470#0" expanded="true" />
                 <element signature="e#3966#3967#0" expanded="true" />
                 <element signature="e#4020#4021#0" expanded="true" />
-                <element signature="e#4085#4086#0" expanded="true" />
-                <element signature="e#4113#4114#0" expanded="true" />
+                <element signature="e#4912#4913#0" expanded="true" />
+                <element signature="e#4940#4941#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -156,7 +148,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547293465596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547294439247" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TEST" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -203,7 +195,7 @@
       <workItem from="1546868484170" duration="1639000" />
       <workItem from="1547030863125" duration="6139000" />
       <workItem from="1547117594307" duration="4030000" />
-      <workItem from="1547290357457" duration="3006000" />
+      <workItem from="1547290357457" duration="4160000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1546869285776</created>
@@ -254,11 +246,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547121617472</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="test">
+      <created>1547293537769</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547293537770</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14814000" />
+    <option name="totallyTimeSpent" value="15968000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -307,14 +306,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/SimpleGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="54" column="29" lean-forward="true" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
+        <state relative-caret-position="277">
+          <caret line="60" column="35" lean-forward="true" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#4427#4428#0" expanded="true" />
+            <element signature="e#4469#4470#0" expanded="true" />
             <element signature="e#3966#3967#0" expanded="true" />
             <element signature="e#4020#4021#0" expanded="true" />
-            <element signature="e#4085#4086#0" expanded="true" />
-            <element signature="e#4113#4114#0" expanded="true" />
+            <element signature="e#4912#4913#0" expanded="true" />
+            <element signature="e#4940#4941#0" expanded="true" />
           </folding>
         </state>
       </provider>
