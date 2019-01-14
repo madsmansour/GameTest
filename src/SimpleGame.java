@@ -7,11 +7,15 @@ import com.almasb.fxgl.entity.components.CollidableComponent;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
+import com.almasb.fxgl.physics.PhysicsComponent;
+import com.almasb.fxgl.physics.PhysicsWorld;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
 import javafx.application.Application;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
@@ -30,9 +34,14 @@ public class SimpleGame extends GameApplication {
         gameSettings.getMenuKey();
         gameSettings.setMenuEnabled(true);
 
+
+
     }
     private Entity player;
     private Entity player2;
+    private Texture ballTexture;
+    private PhysicsComponent ball;
+
 
     @Override
     protected void initGame() {
@@ -58,15 +67,16 @@ public class SimpleGame extends GameApplication {
                 .buildAndAttach(getGameWorld());
 
                  Entities.builder()
-                .type(EntityType.COIN)
-                .at(500, 200)
-                .viewFromNodeWithBBox(new Circle(15, Color.YELLOW))
+                .type(EntityType.BALL)
+                .at(550,  200)
+                .viewFromTextureWithBBox("ball.png")
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
+
     }
 
     public enum EntityType {
-        PLAYER, PLAYER2, COIN , BACKGROUND ,
+        PLAYER, PLAYER2, BALL , BACKGROUND ,
     }
 
     @Override
@@ -155,6 +165,7 @@ public class SimpleGame extends GameApplication {
 
     }
 
+
     @Override
     protected void initGameVars(Map<String, Object> vars) {
         vars.put("pixelsMoved", 0);
@@ -162,23 +173,24 @@ public class SimpleGame extends GameApplication {
 
     @Override
     protected void initPhysics() {
-        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.COIN) {
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.BALL) {
 
             // order of types is the same as passed into the constructor
             @Override
-            protected void onCollisionBegin(Entity player, Entity coin) {
-                coin.removeFromWorld();
+            protected void onCollisionBegin(Entity player, Entity ball) {
+                ball.removeFromWorld();
             }
         });
 
 
-    getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER2, EntityType.COIN) {
+    getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER2, EntityType.BALL) {
 
         // order of types is the same as passed into the constructor
         @Override
-        protected void onCollisionBegin(Entity player2, Entity coin) {
-            coin.removeFromWorld();
+        protected void onCollisionBegin(Entity player2, Entity ball) {
+            ball.removeFromWorld();
         }
+
     });
 }
 
