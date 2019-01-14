@@ -32,6 +32,7 @@ public class SimpleGame extends GameApplication {
 
     }
     private Entity player;
+    private Entity player2;
 
     @Override
     protected void initGame() {
@@ -49,7 +50,7 @@ public class SimpleGame extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
-                 Entities.builder()
+        player2 = Entities.builder()
                 .at(910, 391)
                 .type(EntityType.PLAYER2)
                 .viewFromTextureWithBBox("slime2.png")
@@ -111,6 +112,37 @@ public class SimpleGame extends GameApplication {
             }
         }, KeyCode.F);
 
+        input.addAction(new UserAction("Move Right (Player2)") {
+            @Override
+            protected void onAction() {
+                player2.translateX(5);
+                getGameState().increment("pixelsMoved", +5);
+            }
+        }, KeyCode.RIGHT);
+
+        input.addAction(new UserAction("Move Left (Player2)") {
+            @Override
+            protected void onAction() {
+                player2.translateX(-5); // move left 5 pixels
+                getGameState().increment("pixelsMoved", +5);
+            }
+        }, KeyCode.LEFT);
+
+        input.addAction(new UserAction("Move Up (Player 2)") {
+            @Override
+            protected void onAction() {
+                player2.translateY(-5); // move up 5 pixels
+                getGameState().increment("pixelsMoved", +5);
+            }
+        }, KeyCode.UP);
+
+        input.addAction(new UserAction("Move Down(Player 2)") {
+            @Override
+            protected void onAction() {
+                player2.translateY(5); // move down 5 pixels
+                getGameState().increment("pixelsMoved", +5);
+            }
+        }, KeyCode.DOWN);
     }
     @Override
     protected void initUI() {
@@ -138,7 +170,17 @@ public class SimpleGame extends GameApplication {
                 coin.removeFromWorld();
             }
         });
-    }
+
+
+    getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER2, EntityType.COIN) {
+
+        // order of types is the same as passed into the constructor
+        @Override
+        protected void onCollisionBegin(Entity player2, Entity coin) {
+            coin.removeFromWorld();
+        }
+    });
+}
 
     public static void main(String[] args) {
         launch(args);
