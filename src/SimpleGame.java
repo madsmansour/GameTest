@@ -1,6 +1,4 @@
-import com.almasb.fxgl.app.FXGL;
 import com.almasb.fxgl.app.GameApplication;
-import com.almasb.fxgl.asset.AssetLoader;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.components.CollidableComponent;
@@ -8,18 +6,11 @@ import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
-import com.almasb.fxgl.physics.PhysicsWorld;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
-import javafx.application.Application;
 import javafx.scene.input.KeyCode;
-import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.paint.PhongMaterial;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
-import javax.swing.*;
+
 import java.util.Map;
 
 public class SimpleGame extends GameApplication {
@@ -41,6 +32,7 @@ public class SimpleGame extends GameApplication {
     private Entity player2;
     private Texture ballTexture;
     private PhysicsComponent ball;
+    private Entity bottomline;
 
 
     @Override
@@ -73,10 +65,17 @@ public class SimpleGame extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
+        Entities.builder()
+                .type(EntityType.BOTTOMLINE)
+                .at(0,  482)
+                .viewFromTextureWithBBox("bottomline.png")
+                .with(new CollidableComponent(true))
+                .buildAndAttach(getGameWorld());
+
     }
 
     public enum EntityType {
-        PLAYER, PLAYER2, BALL , BACKGROUND ,
+        PLAYER, PLAYER2, BALL , BACKGROUND , BOTTOMLINE
     }
 
     @Override
@@ -191,6 +190,14 @@ public class SimpleGame extends GameApplication {
             ball.removeFromWorld();
         }
 
+
+    });
+
+    getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.BOTTOMLINE) {
+        @Override
+        protected void onCollisionBegin(Entity player, Entity bottomline) {
+            player.isColliding(bottomline);
+        }
     });
 }
 
