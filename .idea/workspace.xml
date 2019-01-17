@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50d9269a-64d5-4d15-961c-112882f58965" name="Default Changelist" comment="Code">
+    <list default="true" id="50d9269a-64d5-4d15-961c-112882f58965" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-14-jan.-2019-11.47.41.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.28.26.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.28.49.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.29.15.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.29.28.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.29.50.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.30.14.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/FXGL-15-jan.-2019-09.35.32.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$EntityType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame$EntityType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GameTest/SimpleGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GameTest/SimpleGame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/Mads/user.profile" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/Mads/user.profile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SimpleGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SimpleGame.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +15,7 @@
     <session id="-1226764107">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -62,13 +44,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="2929" />
+          <entry key="java" value="2940" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2929" />
+          <entry key="JAVA" value="2940" />
           <entry key="PLAIN_TEXT" value="22" />
         </counts>
       </usages-collector>
@@ -77,10 +59,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/SimpleGame.java">
+        <entry file="file://$PROJECT_DIR$/src/SoccerSlime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+            <state relative-caret-position="119">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -184,7 +166,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547716273244" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547716305226" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../TEST" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -250,7 +232,7 @@
       <workItem from="1547456796997" duration="5306000" />
       <workItem from="1547539772658" duration="3050000" />
       <workItem from="1547711207149" duration="655000" />
-      <workItem from="1547713598593" duration="2363000" />
+      <workItem from="1547713598593" duration="2561000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1546869285776</created>
@@ -371,11 +353,25 @@
       <option name="project" value="LOCAL" />
       <updated>1547541772396</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Code">
+      <created>1547716219776</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1547716219776</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Code">
+      <created>1547716289508</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1547716289508</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28714000" />
+    <option name="totallyTimeSpent" value="28912000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -388,9 +384,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2872483" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2872483" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -399,7 +394,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,10 +517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleGame.java">
+    <entry file="file://$PROJECT_DIR$/src/SoccerSlime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="87" column="48" lean-forward="true" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+        <state relative-caret-position="119">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
