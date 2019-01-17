@@ -15,7 +15,7 @@ import javafx.scene.text.Text;
 
 import java.util.Map;
 
-public class SimpleGame extends GameApplication {
+public class SoccerSlime extends GameApplication {
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
