@@ -6,8 +6,10 @@ import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
+import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.settings.GameSettings;
 import com.almasb.fxgl.texture.Texture;
+import com.almasb.fxgl.time.Timer;
 import javafx.scene.input.KeyCode;
 import javafx.scene.text.Text;
 
@@ -26,17 +28,17 @@ public class SimpleGame extends GameApplication {
         gameSettings.setMenuEnabled(true);
 
 
-
     }
     private Entity player;
     private Entity player2;
-    private Texture ballTexture;
     private PhysicsComponent ball;
     private Entity bottomline;
 
 
+
     @Override
     protected void initGame() {
+
         Entities.builder()
                 .type(EntityType.BACKGROUND)
                 .at(0, 0)
@@ -71,6 +73,7 @@ public class SimpleGame extends GameApplication {
                 .viewFromTextureWithBBox("bottomline.png")
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
+
 
     }
 
@@ -114,7 +117,7 @@ public class SimpleGame extends GameApplication {
             }
         }, KeyCode.S);
 
-        input.addAction(new UserAction("Siiiiiii") {
+        input.addAction(new UserAction("Celebrate") {
             @Override
             protected void onActionBegin() {
                 getAudioPlayer().playSound("siii.wav");
