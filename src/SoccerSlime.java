@@ -26,8 +26,6 @@ public class SoccerSlime extends GameApplication {
         gameSettings.setMenuKey(KeyCode.M);
         gameSettings.getMenuKey();
         gameSettings.setMenuEnabled(true);
-        kk
-
 
     }
     private Entity player;
