@@ -1,21 +1,20 @@
 import com.almasb.fxgl.app.GameApplication;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
-import com.almasb.fxgl.entity.components.CollidableComponent;
+import com.almasb.fxgl.entity.component.CollidableComponent;
 import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
+import com.almasb.fxgl.physics.PhysicsWorld;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
 import com.almasb.fxgl.settings.GameSettings;
-import com.almasb.fxgl.texture.Texture;
-import com.almasb.fxgl.time.Timer;
 import javafx.scene.input.KeyCode;
 import javafx.scene.text.Text;
-
 import java.util.Map;
 
 public class SoccerSlime extends GameApplication {
+
 
     @Override
     protected void initSettings(GameSettings gameSettings) {
@@ -28,6 +27,8 @@ public class SoccerSlime extends GameApplication {
         gameSettings.setMenuEnabled(true);
 
     }
+
+
     private Entity player;
     private Entity player2;
     private PhysicsComponent ball;
@@ -37,6 +38,9 @@ public class SoccerSlime extends GameApplication {
 
     @Override
     protected void initGame() {
+
+        PhysicsComponent physicsComponent = new PhysicsComponent();
+        physicsComponent.setBodyType(BodyType.DYNAMIC);
 
         Entities.builder()
                 .type(EntityType.BACKGROUND)
@@ -59,12 +63,15 @@ public class SoccerSlime extends GameApplication {
                 .with(new CollidableComponent(true))
                 .buildAndAttach(getGameWorld());
 
+
                  Entities.builder()
                 .type(EntityType.BALL)
                 .at(550,  200)
                 .viewFromTextureWithBBox("ball.png")
                 .with(new CollidableComponent(true))
-                .buildAndAttach(getGameWorld());
+                 .with(new PhysicsComponent())
+                 .buildAndAttach(getGameWorld());
+
 
         Entities.builder()
                 .type(EntityType.BOTTOMLINE)
@@ -74,11 +81,14 @@ public class SoccerSlime extends GameApplication {
                 .buildAndAttach(getGameWorld());
 
 
+
+
     }
 
     public enum EntityType {
         PLAYER, PLAYER2, BALL , BACKGROUND , BOTTOMLINE
     }
+
 
     @Override
     protected void initInput() {
@@ -174,6 +184,10 @@ public class SoccerSlime extends GameApplication {
 
     @Override
     protected void initPhysics() {
+        PhysicsWorld physics = getPhysicsWorld();
+
+
+
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.BALL) {
 
             // order of types is the same as passed into the constructor
@@ -184,16 +198,6 @@ public class SoccerSlime extends GameApplication {
         });
 
 
-    getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER2, EntityType.BALL) {
-
-        // order of types is the same as passed into the constructor
-        @Override
-        protected void onCollisionBegin(Entity player2, Entity ball) {
-            ball.removeFromWorld();
-        }
-
-
-    });
 
     getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.BOTTOMLINE) {
         @Override

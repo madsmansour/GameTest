@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50d9269a-64d5-4d15-961c-112882f58965" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/fxgl_0_5_4_uber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/fxgl_0_5_4_uber.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-08.52.16.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-08.57.41.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-09.31.33.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-09.32.34.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-09.33.10.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-10.03.02.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-10.03.24.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-10.08.46.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-10.09.58.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/FXGL-17-jan.-2019-10.11.18.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/Mads/user.profile" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/Mads/user.profile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SoccerSlime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SoccerSlime.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,18 +28,18 @@
     <session id="-1226764107">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -44,13 +57,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="13" />
-          <entry key="java" value="2940" />
+          <entry key="java" value="3384" />
           <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2940" />
+          <entry key="JAVA" value="3384" />
           <entry key="PLAIN_TEXT" value="22" />
         </counts>
       </usages-collector>
@@ -61,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SoccerSlime.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state relative-caret-position="294">
+              <caret line="79" column="58" lean-forward="true" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,6 +119,7 @@
         <option value="$PROJECT_DIR$/src/common/common.java" />
         <option value="$PROJECT_DIR$/src/PhysicsSample.java" />
         <option value="$PROJECT_DIR$/src/SimpleGame.java" />
+        <option value="$PROJECT_DIR$/src/SoccerSlime.java" />
       </list>
     </option>
   </component>
@@ -127,7 +141,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,27 +165,21 @@
               <item name="GameTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
-            <path>
-              <item name="GameTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="fxgl-0.5.4-uber" type="70bed36:NamedLibraryElementNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547716305226" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TEST" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547725444557" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../fxgl-0.4.3-uber.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -233,6 +242,8 @@
       <workItem from="1547539772658" duration="3050000" />
       <workItem from="1547711207149" duration="655000" />
       <workItem from="1547713598593" duration="2561000" />
+      <workItem from="1547716416051" duration="107000" />
+      <workItem from="1547721705489" duration="3617000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1546869285776</created>
@@ -367,11 +378,32 @@
       <option name="project" value="LOCAL" />
       <updated>1547716289508</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Code">
+      <created>1547716479164</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1547716479164</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Code">
+      <created>1547716490114</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1547716490114</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Code">
+      <created>1547716514141</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1547716514141</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28912000" />
+    <option name="totallyTimeSpent" value="32636000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -384,8 +416,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2872483" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -394,7 +427,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32907802" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,6 +486,19 @@
     <option name="LAST_COMMIT_MESSAGE" value="Code" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/assets/textures/PhysicsSample.java" />
+    <entry file="file://$PROJECT_DIR$/src/common/common.java" />
+    <entry file="file://$PROJECT_DIR$/src/PhysicsSample.java" />
+    <entry file="file://$PROJECT_DIR$/src/SoccerSlime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="79" column="58" lean-forward="true" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/textures/ball.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -461,71 +507,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/textures/brick.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/textures/PhysicsSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2764#2765#0" expanded="true" />
-            <element signature="e#2814#2815#0" expanded="true" />
-            <element signature="e#2367#2368#0" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
-            <element signature="e#2748#2749#0" expanded="true" />
-            <element signature="e#2800#2801#0" expanded="true" />
-            <element signature="e#4592#4593#0" expanded="true" />
-            <element signature="e#4664#4665#0" expanded="true" />
-            <element signature="e#4757#4758#0" expanded="true" />
-            <element signature="e#4823#4824#0" expanded="true" />
-            <element signature="e#4919#4920#0" expanded="true" />
-            <element signature="e#4989#4990#0" expanded="true" />
-            <element signature="e#5053#5054#0" expanded="true" />
-            <element signature="e#5081#5082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/common/common.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PhysicsSample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="118" column="38" lean-forward="true" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1458#1459#0" expanded="true" />
-            <element signature="e#2367#2368#0" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2558#2559#0" expanded="true" />
-            <element signature="e#2608#2609#0" expanded="true" />
-            <element signature="e#2748#2749#0" expanded="true" />
-            <element signature="e#2800#2801#0" expanded="true" />
-            <element signature="e#4592#4593#0" expanded="true" />
-            <element signature="e#4664#4665#0" expanded="true" />
-            <element signature="e#4757#4758#0" expanded="true" />
-            <element signature="e#4823#4824#0" expanded="true" />
-            <element signature="e#4919#4920#0" expanded="true" />
-            <element signature="e#4989#4990#0" expanded="true" />
-            <element signature="e#5053#5054#0" expanded="true" />
-            <element signature="e#5081#5082#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SoccerSlime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
   </component>
   <component name="masterDetails">
