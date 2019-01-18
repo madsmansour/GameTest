@@ -1,4 +1,5 @@
 import com.almasb.fxgl.app.GameApplication;
+import com.almasb.fxgl.asset.AssetLoader;
 import com.almasb.fxgl.entity.Entities;
 import com.almasb.fxgl.entity.Entity;
 import com.almasb.fxgl.entity.component.CollidableComponent;
@@ -6,11 +7,20 @@ import com.almasb.fxgl.input.Input;
 import com.almasb.fxgl.input.UserAction;
 import com.almasb.fxgl.physics.CollisionHandler;
 import com.almasb.fxgl.physics.PhysicsComponent;
+import com.almasb.fxgl.physics.PhysicsControl;
 import com.almasb.fxgl.physics.PhysicsWorld;
 import com.almasb.fxgl.physics.box2d.dynamics.BodyType;
+import com.almasb.fxgl.physics.box2d.dynamics.FixtureDef;
 import com.almasb.fxgl.settings.GameSettings;
+import com.almasb.fxgl.texture.Texture;
+import javafx.scene.image.PixelFormat;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
+
+import java.lang.reflect.Type;
+import java.util.GregorianCalendar;
 import java.util.Map;
 
 public class SoccerSlime extends GameApplication {
@@ -26,27 +36,37 @@ public class SoccerSlime extends GameApplication {
         gameSettings.getMenuKey();
         gameSettings.setMenuEnabled(true);
 
-    }
 
+
+    }
 
     private Entity player;
     private Entity player2;
     private PhysicsComponent ball;
-    private Entity bottomline;
+    private PhysicsComponent bottomline;
+    private PhysicsComponent top;
+
 
 
 
     @Override
     protected void initGame() {
-
         PhysicsComponent physicsComponent = new PhysicsComponent();
         physicsComponent.setBodyType(BodyType.DYNAMIC);
+
+
+        PhysicsComponent immovable = new PhysicsComponent();
+        immovable.setBodyType(BodyType.STATIC);
+
+
+
 
         Entities.builder()
                 .type(EntityType.BACKGROUND)
                 .at(0, 0)
                 .viewFromTexture("background1.png")
                 .buildAndAttach(getGameWorld());
+
 
         player = Entities.builder()
                 .at(100, 395)
@@ -61,32 +81,30 @@ public class SoccerSlime extends GameApplication {
                 .type(EntityType.PLAYER2)
                 .viewFromTextureWithBBox("slime2.png")
                 .with(new CollidableComponent(true))
+                .with(new PhysicsComponent())
                 .buildAndAttach(getGameWorld());
 
 
-                 Entities.builder()
+        Entities.builder()
                 .type(EntityType.BALL)
                 .at(550,  200)
                 .viewFromTextureWithBBox("ball.png")
                 .with(new CollidableComponent(true))
-                 .with(new PhysicsComponent())
-                 .buildAndAttach(getGameWorld());
-
+                .with(physicsComponent)
+                .buildAndAttach(getGameWorld());
 
         Entities.builder()
                 .type(EntityType.BOTTOMLINE)
                 .at(0,  482)
                 .viewFromTextureWithBBox("bottomline.png")
                 .with(new CollidableComponent(true))
+                .with(immovable)
                 .buildAndAttach(getGameWorld());
-
-
-
 
     }
 
     public enum EntityType {
-        PLAYER, PLAYER2, BALL , BACKGROUND , BOTTOMLINE
+        PLAYER, PLAYER2, BALL , BACKGROUND , BOTTOMLINE, SCREEN
     }
 
 
@@ -118,13 +136,6 @@ public class SoccerSlime extends GameApplication {
             }
         }, KeyCode.W);
 
-        input.addAction(new UserAction("Move Down") {
-            @Override
-            protected void onAction() {
-                player.translateY(5); // move down 5 pixels
-                getGameState().increment("pixelsMoved", +5);
-            }
-        }, KeyCode.S);
 
         input.addAction(new UserAction("Celebrate") {
             @Override
@@ -157,13 +168,6 @@ public class SoccerSlime extends GameApplication {
             }
         }, KeyCode.UP);
 
-        input.addAction(new UserAction("Move Down(Player 2)") {
-            @Override
-            protected void onAction() {
-                player2.translateY(5); // move down 5 pixels
-                getGameState().increment("pixelsMoved", +5);
-            }
-        }, KeyCode.DOWN);
     }
     @Override
     protected void initUI() {
@@ -173,6 +177,7 @@ public class SoccerSlime extends GameApplication {
 
         getGameScene().addUINode(textPixels); // add to the scene graph
         textPixels.textProperty().bind(getGameState().intProperty("pixelsMoved").asString());
+
 
     }
 
@@ -185,7 +190,6 @@ public class SoccerSlime extends GameApplication {
     @Override
     protected void initPhysics() {
         PhysicsWorld physics = getPhysicsWorld();
-
 
 
         getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.BALL) {
@@ -202,9 +206,16 @@ public class SoccerSlime extends GameApplication {
     getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER, EntityType.BOTTOMLINE) {
         @Override
         protected void onCollisionBegin(Entity player, Entity bottomline) {
-            player.isColliding(bottomline);
+            System.out.println("Player1 colliding bottomline");
         }
     });
+
+        getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.PLAYER2, EntityType.BALL) {
+            @Override
+            protected void onCollisionBegin(Entity player2, Entity ball) {
+                System.out.println("Player2 colliding ball");
+            }
+        });
 }
 
     public static void main(String[] args) {
